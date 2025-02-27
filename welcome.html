@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - SENTRA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="welcome-page">
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="icon">
+            <img src="https://github.com/Zahra-2/SENTRA/blob/main/logo.png?raw=true" alt="Logo" class="logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+        <h2>Welcome to SENTRA, <span id="username"></span>!</h2>
+        <p>We are glad to have you here. Explore our services and enjoy your stay.</p>
+    </div>
+
+    <script>
+        // Get the username from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        document.getElementById('username').textContent = username;
+    </script>
+</body>
+</html>
